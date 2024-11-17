@@ -5,19 +5,15 @@
 }
 
 body{
-  height:100%;
-  width: 100%;
-  overflow-x: hidden;
+  height : 100vh;
   background-image: url("./assets/Weather.jpg");
-  background-size:contain;
   background-repeat: no-repeat;
-  background-size: 100% 400%;
+  background-size:cover;
 }
 
 .nav{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
+  justify-content: flex-end;
   height: 6rem;
   width: 100vw;
   background-color:#3e5172;
@@ -61,9 +57,7 @@ footer p{
 }
 
 .card{
-  position: relative;
-  left:30rem;
-  top:4.5rem;
+  margin : 50px auto;
   padding:0.75rem;
   width:30vw;
   font-family: "Roboto", sans-serif;
@@ -131,9 +125,7 @@ footer p{
 }
 
 .about{
-  position: relative;
-  top: 5rem;
-  left: 30rem;
+  margin : 50px auto;
   width: 30rem;
   box-shadow: 1px 4px  2px rgba(37, 54, 80, 0.25);
   font-family: "Roboto", sans-serif;
@@ -159,18 +151,9 @@ footer p{
   color: #945e4a;
 }
 
-.contact{
-  height: 73vh;
-  background-image: url("./assets/Weather.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 
 .contact div{
-  position: relative;
-  top: 8rem;
-  left: 40rem;
+  margin : 50px auto;
   width: 35vw;
   box-shadow: 5px  2px 100px 20px rgba(23, 38, 59, 0.25);
   padding :0.5rem;
@@ -184,23 +167,31 @@ footer p{
   font-style: normal;
   color: #cfc260;
 }
- 
- @media (max-width:1300px){
-  body{
-    background-size: 100% 400%;
-  }
-  
-} 
-@media (max-width:950px){
-  #cardDetail{
-    height: max-content;
-  }
+ @media (max-width : 1175px) {
   .card input{
-    width:10vw;
+    width : 100%;
+
   }
+  .card button{
+    width : 100%;
+  }
+ }
+ 
+ @media (max-width : 830px){
   .card{
-    left:18rem;
-    font-size: .75rem;
+    width : 50%;
   }
-  
-}
+  .contact div{
+    width : 70vw;
+  }
+  .about{
+    width : 70vw;
+  }
+ }
+
+ @media (max-width : 550px){
+  .card{
+    width : 80%;
+  }
+ }
+
